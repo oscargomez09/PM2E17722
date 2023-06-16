@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E17722.MainPage">
+    <StackLayout>
+
+        <Frame BackgroundColor="#2196F3">
+            <Label Text="SITE VISITOR APP" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+
+        <Label Text="IMAGEN SITIO VISITADO" HorizontalTextAlignment="Center" />
+        <Image x:Name="foto" WidthRequest="100" HeightRequest="200"/>
+
+        <Button x:Name="btnfoto" Text="Tomar Foto" Clicked="btnfoto_Clicked" CornerRadius="10"  HeightRequest="40"/>
+
+        <Label Text="Latitud" />
+        <Entry x:Name="latitud" Placeholder="Latitud" />
+        <Label Text="Longitud" />
+        <Entry x:Name="longitud" Placeholder="Longitud" /> 
+        <Label Text="Descripcion" />
+        <Entry x:Name="descripcion" Placeholder="Descripcion" />
+
+        <Button x:Name="btnagregar" Text="Agregar" Clicked="btnagregar_Clicked" CornerRadius="10" WidthRequest="20"  HeightRequest="40"/>
+        <Button x:Name="btnlista" Text="Lista Sitios" Clicked="btnlista_Clicked" CornerRadius="10"  HeightRequest="40"/>
+        <Button x:Name="btnsalir" Text="Salir" Clicked="btnsalir_Clicked" CornerRadius="10"  HeightRequest="40"/>
+
+       
+
+    </StackLayout>
+</ContentPage>

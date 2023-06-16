@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E17722.Views.PageLista"
+             xmlns:conver="clr-namespace:PM2E17722.Controllers">
+
+    <ContentPage.Resources>
+        <conver:ByteArrayImage x:Key="ByteArray" />
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <CollectionView x:Name="list" SelectionMode="Single" SelectionChanged="list_SelectionChanged">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" />
+
+
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Image Grid.Column="0" x:Name="imagen" Source="{Binding foto, Converter={StaticResource ByteArray}}" WidthRequest="80" HorizontalOptions="Center"/>
+                        <Label Text="{Binding latitud}"  />
+                        <Label Text="{Binding longitud}"  />
+                        <Label Text="{Binding descripcion}"  />
+
+                        <Button x:Name="btnmapa" Text="Mapa" Clicked="btnmapa_Clicked" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>
